@@ -4,4 +4,3 @@ numpy
 matplotlib
 biopython
 scikit-learn
-streamlit-pdf-viewer
