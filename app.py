@@ -63,10 +63,6 @@ def load_dataset_sequences(file_path):
 
 def load_new_sequence(default_seq="ACDEFGHIKLMNPQRSTVWY"):
     global inputs
-    """
-    새 시퀀스를 사용자 입력으로 받습니다.
-    사용자가 아무 입력도 하지 않으면 기본 시퀀스를 반환합니다.
-    """
     #new_seq = input("Enter new sequence (or press Enter to use default): ").strip()
     new_seq=inputs
     if not new_seq:
