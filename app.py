@@ -12,9 +12,8 @@ import random
 inputs = st.text_input('Type an 몰?루')
 
 
-alpha1=st.file_uploader("alpha 넣기")
-
-feature1=st.file_uploader("feature 넣기")
+alpha1="alpha_helix_sequences.csv"
+feature1="feature_matrix.csv"
 
 
 def check_files(*file_paths):
