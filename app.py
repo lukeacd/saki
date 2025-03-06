@@ -284,11 +284,11 @@ def generator():
     X = grouped[["Min_Levenshtein"]].values
     y = grouped["Avg_BLOSUM62"].values
     model, slope, intercept, r2, pred = perform_linear_regression(X, y)
-    st.write(f"Slope: {slope:.4f}, Intercept: {intercept:.4f}, R^2: {r2:.4f}")
+    #st.write(f"Slope: {slope:.4f}, Intercept: {intercept:.4f}, R^2: {r2:.4f}")
 
     # 4. 초기 시퀀스(Seed) 로드 (기존 파일 또는 기본값)
     seed_seq = selected_seq
-    st.write("Seed sequence:", seed_seq)
+    #st.write("Seed sequence:", seed_seq)
 
     # 5. PairwiseAligner 구성 및 데이터셋 서열 로드
     aligner = configure_aligner()
@@ -304,7 +304,7 @@ def generator():
     )
     if new_alpha_seq:
         st.write("\nGenerated Output 'Alpha' sequence:", new_alpha_seq)
-        st.write("Features of generated sequence:", features)
+        #st.write("Features of generated sequence:", features)
     else:
         st.write("\nFailed to generate a Output 'Alpha' sequence within the iteration limit.")
 
