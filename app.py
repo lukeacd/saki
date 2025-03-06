@@ -8,15 +8,13 @@ from Bio.Align import PairwiseAligner
 from Bio.Align import substitution_matrices
 from sklearn.linear_model import LinearRegression
 import random
+from streamlit_pdf_viewer import pdf_viewer
+
+pdf_viewer("Alpha Helix Classification & Generator 사용 가이드.pdf")
 
 
-# 이미 가지고 있는 HTML 코드 예제 (iframe을 이용하여 PDF를 표시)
-html_code = """
-<iframe width="560" height="315" src="https://www.youtube.com/embed/HmwYsxb1Bt8?si=G0HA7XTwOipcOARt" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-"""
 
-# unsafe_allow_html=True 옵션을 주어 HTML 코드가 렌더링되도록 합니다.
-st.markdown(html_code, unsafe_allow_html=True)
+
 
 inputs = st.text_input('Enter new sequence (or press Enter to use default): ')
 
