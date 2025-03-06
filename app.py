@@ -8,10 +8,8 @@ from Bio.Align import PairwiseAligner
 from Bio.Align import substitution_matrices
 from sklearn.linear_model import LinearRegression
 import random
-from streamlit_pdf_viewer import pdf_viewer
 
-pdf_viewer("Alpha Helix Classification & Generator 사용 가이드.pdf")
-
+st.image("Alpha Helix Classification & Generator 사용 가이드-1.png")
 
 
 
