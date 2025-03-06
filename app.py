@@ -12,7 +12,9 @@ import random
 inputs = st.text_input('Type an 몰?루')
 
 
+alpha1=st.file_uploader("alpha 넣기")
 
+feature1=st.file_uploader("feature 넣기")
 
 
 def check_files(*file_paths):
@@ -139,8 +141,8 @@ def plot_data_and_fit(df, X, pred, new_feature):
 
 def sequence_module():
     # 파일 경로 설정
-    FEATURE_MATRIX_FILE = "C:/Users/조용민/Desktop/학교 파일/saki/cvss/feature_matrix.csv"
-    ALPHA_SEQ_FILE = "C:/Users/조용민/Desktop/학교 파일/saki/cvss/alpha_helix_sequences.csv"
+    FEATURE_MATRIX_FILE = feature1
+    ALPHA_SEQ_FILE = alpha1
 
     # 1. 파일 존재 여부 확인
     check_files(FEATURE_MATRIX_FILE, ALPHA_SEQ_FILE)
@@ -189,7 +191,7 @@ def sequence_module():
 
 
 # alpha_helix_sequences.csv 파일에서 무작위 서열 선택
-alpha = pd.read_csv('C:/Users/조용민/Desktop/학교 파일/saki/cvss/alpha_helix_sequences.csv')
+alpha = pd.read_csv(alpha1)
 n = random.randint(1, len(alpha))
 # 'ID' 컬럼이 n인 행의 'sequence' 값을 가져와서, 개별 아미노산 문자 리스트로 변환
 selected_seq = alpha[alpha['ID'] == n]['sequence'].values[0]
@@ -276,8 +278,8 @@ def generate_new_alpha_sequence(seed, dataset_sequences, aligner, regression_mod
 
 def generator():
     # 파일 경로 설정
-    FEATURE_MATRIX_FILE = "C:/Users/조용민/Desktop/학교 파일/saki/cvss/feature_matrix.csv"
-    ALPHA_SEQ_FILE = "C:/Users/조용민/Desktop/학교 파일/saki/cvss/alpha_helix_sequences.csv"
+    FEATURE_MATRIX_FILE = feature1
+    ALPHA_SEQ_FILE = alpha1
     BASE_DIR = r"C:/Users/조용민/Desktop/학교 파일/saki"
     NEW_SEQUENCE_TXT = os.path.join(BASE_DIR, "new_sequence.txt")
     NEW_SEQUENCE_CSV = os.path.join(BASE_DIR, "new_sequence.csv")
