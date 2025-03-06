@@ -8,6 +8,18 @@ from Bio.Align import PairwiseAligner
 from Bio.Align import substitution_matrices
 from sklearn.linear_model import LinearRegression
 import random
+from streamlit_pdf_viewer import pdf_viewer
+
+
+container_pdf, container_chat = st.columns([50, 50])
+
+
+with container_pdf:
+    pdf_file = "Alpha Helix Classification & Generator 사용 가이드.pdf"
+
+    if pdf_file:
+        binary_data = pdf_file.getvalue()
+        pdf_viewer(input=binary_data,width=700)
 
 inputs = st.text_input('Enter new sequence (or press Enter to use default): ')
 
