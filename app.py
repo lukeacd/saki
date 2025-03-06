@@ -17,13 +17,6 @@ feature1="feature_matrix.csv"
 
 
 def check_files(*file_paths):
-    """필요한 파일들이 존재하는지 확인합니다."""
-    """
-    missing_files = [fp for fp in file_paths if not os.path.exists(fp)]
-    if missing_files:
-        for fp in missing_files:
-            st.write(f"Error: {fp} not found. Please ensure the file exists or adjust the path.")
-        sys.exit(1)"""
     pass
 
 
