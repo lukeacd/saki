@@ -148,10 +148,10 @@ def sequence_module():
     y = grouped["Avg_BLOSUM62"].values
     model, slope, intercept, r2, pred = perform_linear_regression(X, y)
 
-    st.write("\n=== Linear Regression Results ===")
-    st.write(f"Slope:      {slope:.4f}")
-    st.write(f"Intercept:  {intercept:.4f}")
-    st.write(f"R^2 score:  {r2:.4f}")
+    #st.write("\n=== Linear Regression Results ===")
+    #st.write(f"Slope:      {slope:.4f}")
+    #st.write(f"Intercept:  {intercept:.4f}")
+    #st.write(f"R^2 score:  {r2:.4f}")
 
     # 5. 새 시퀀스 로드 (사용자 입력 또는 기본값 사용)
     new_seq = load_new_sequence()
@@ -165,7 +165,7 @@ def sequence_module():
 
     # 8. 새 시퀀스에 대한 특징 계산
     new_feature = compute_features_for_new_sequence(new_seq, dataset_sequences, aligner)
-    st.write("New sequence feature vector:", new_feature)
+    #st.write("New sequence feature vector:", new_feature)
 
     # 9. 예측 수행 (여기서는 Min_Levenshtein 값만 사용)
     predicted_value = model.predict(np.array([[new_feature[0]]]))[0]
