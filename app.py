@@ -137,7 +137,7 @@ def plot_data_and_fit(df, X, pred, new_feature):
     plt.ylabel("Minimum Avg_BLOSUM62 Score")
     plt.title("Linear Regression: Min_Levenshtein vs. Avg_BLOSUM62")
     plt.legend()
-    plt.show()
+    st.pyplot(plt.gcf())
 
 
 def sequence_module():
