@@ -314,12 +314,12 @@ def generator():
 
 
 button =st.button("Alpha helix classification")
-button2 =st.button("alpha helix generator")
+button2 =st.button("Alpha helix generator")
 if button:
-    st.write("access")
+    st.write("access classification")
     sequence_module()
 if button2:
-    st.write("access2")
+    st.write("access generator")
     generator()
     
 #           streamlit run app.py
