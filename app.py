@@ -186,7 +186,7 @@ n = random.randint(1, len(alpha))
 # 'ID' 컬럼이 n인 행의 'sequence' 값을 가져와서, 개별 아미노산 문자 리스트로 변환
 selected_seq = alpha[alpha['ID'] == n]['sequence'].values[0]
 AMINO_ACIDS = list(selected_seq)
-st.write(f"Selected sequence for AMINO_ACIDS (ID={n}): {selected_seq}")
+#st.write(f"Selected sequence for AMINO_ACIDS (ID={n}): {selected_seq}")
 
 
 def modify_sequence(seq, method="random_substitution", mutation_rate=0.1):
