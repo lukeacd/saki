@@ -9,7 +9,7 @@ from Bio.Align import substitution_matrices
 from sklearn.linear_model import LinearRegression
 import random
 
-inputs = st.text_input('Type an 몰?루')
+inputs = st.text_input('Enter new sequence (or press Enter to use default): ')
 
 
 alpha1="alpha_helix_sequences.csv"
