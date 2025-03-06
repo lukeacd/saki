@@ -258,7 +258,7 @@ def generate_new_alpha_sequence(seed, dataset_sequences, aligner, regression_mod
         features = compute_features_for_new_sequence(candidate, dataset_sequences, aligner)
         predicted_value = regression_model.predict(np.array([[features[0]]]))[0]
         decision = "Alpha" if predicted_value < features[1] else "Not Alpha"
-        st.write(f"Iteration {i + 1}: Candidate: {candidate}, Features: {features}, Decision: {decision}")
+        #st.write(f"Iteration {i + 1}: Candidate: {candidate}, Features: {features}, Decision: {decision}")
         if decision == "Alpha":
             return candidate, features
         # 다음 변이를 위해 현재 서열 업데이트
