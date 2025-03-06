@@ -324,8 +324,8 @@ def generator():
 
 
 
-button =st.button("sequence_module")
-button2 =st.button("generator")
+button =st.button("Alpha helix classification")
+button2 =st.button("alpha helix generator")
 if button:
     st.write("access")
     sequence_module()
