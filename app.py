@@ -9,8 +9,7 @@ from Bio.Align import substitution_matrices
 from sklearn.linear_model import LinearRegression
 import random
 
-st.image("Alpha Helix Classification & Generator 사용 가이드-1.png")
-
+st.download_button("사용 가이드 다운로드","Alpha Helix Classification & Generator 사용 가이드.pdf")
 
 
 
